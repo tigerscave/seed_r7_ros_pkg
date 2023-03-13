@@ -37,7 +37,7 @@ class UdevInstall:
 
                print(upper[3])
                #prev_upper_id = upper.strip("ATTRS{serial}==")
-               p1 = subprocess.Popen(['udevadm','info','-n', '/dev/ttyACM0'], stdout=subprocess.PIPE)
+               p1 = subprocess.Popen(['udevadm','info','-n', '/dev/ttyUSB0'], stdout=subprocess.PIPE)
                p2 = subprocess.Popen(['grep', 'SERIAL_SHORT'], stdin=p1.stdout, stdout=subprocess.PIPE)
                #p1 = subprocess.Popen(['udevadm','info','-n', '/dev/tty0'], stdout=subprocess.PIPE)
                #p2 = subprocess.Popen(['grep', 'MAJOR'], stdin=p1.stdout, stdout=subprocess.PIPE)
@@ -57,7 +57,7 @@ class UdevInstall:
 
                print(lower[3])
                #prev_upper_id = upper.strip("ATTRS{serial}==")
-               p1 = subprocess.Popen(['udevadm','info','-n', '/dev/ttyACM1'], stdout=subprocess.PIPE)
+               p1 = subprocess.Popen(['udevadm','info','-n', '/dev/ttyUSB0'], stdout=subprocess.PIPE)
                p2 = subprocess.Popen(['grep', 'SERIAL_SHORT'], stdin=p1.stdout, stdout=subprocess.PIPE)
                #p1 = subprocess.Popen(['udevadm','info','-n', '/dev/tty0'], stdout=subprocess.PIPE)
                #p2 = subprocess.Popen(['grep', 'MAJOR'], stdin=p1.stdout, stdout=subprocess.PIPE)
